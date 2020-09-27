@@ -11,6 +11,7 @@ public class SignUpController {
 
     @GetMapping()
     public String signup() {
+        System.out.println("In sign up get mapping");
         return "signup";
     }
 }

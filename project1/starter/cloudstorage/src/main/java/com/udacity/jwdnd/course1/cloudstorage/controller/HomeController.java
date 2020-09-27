@@ -11,6 +11,7 @@ public class HomeController {
 
     @GetMapping()
     public String home() {
+        System.out.println("In home get mapping");
         return "home";
     }
 }

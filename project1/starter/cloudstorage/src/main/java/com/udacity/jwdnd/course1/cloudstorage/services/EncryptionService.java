@@ -17,6 +17,7 @@ public class EncryptionService {
     private Logger logger = LoggerFactory.getLogger(EncryptionService.class);
 
     public String encryptValue(String data, String key) {
+        System.out.println("In encrypt value");
         byte[] encryptedValue = null;
 
         try {
@@ -33,6 +34,7 @@ public class EncryptionService {
     }
 
     public String decryptValue(String data, String key) {
+        System.out.println("In decrypt value");
         byte[] decryptedValue = null;
 
         try {
