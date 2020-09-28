@@ -31,6 +31,7 @@ public class UserService {
     }
 
     public User getUser(String username) {
+        System.out.println("getting user with name: " + username);
         return userMapper.getUser(username);
     }
 }

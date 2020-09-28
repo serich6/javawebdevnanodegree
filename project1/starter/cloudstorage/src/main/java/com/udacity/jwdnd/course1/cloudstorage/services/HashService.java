@@ -17,7 +17,7 @@ public class HashService {
     private Logger logger = LoggerFactory.getLogger(HashService.class);
 
     public String getHashedValue(String data, String salt) {
-        System.out.println("Creating hash service");
+        System.out.println("In hash service");
         byte[] hashedValue = null;
 
         KeySpec spec = new PBEKeySpec(data.toCharArray(), salt.getBytes(), 5000, 128);
