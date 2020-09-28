@@ -27,7 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         // TODO: remove home from here, obvs
         http.authorizeRequests()
-                .antMatchers("/signup", "/home", "/css/**", "/js/**").permitAll()
+                .antMatchers("/signup", "/home", "/h2*", "/css/**", "/js/**").permitAll()
                 .anyRequest().authenticated();
 
         http.formLogin()
