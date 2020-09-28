@@ -27,13 +27,17 @@ public class AuthenticationService implements AuthenticationProvider {
 
         User user = userMapper.getUser(username);
         if (user != null) {
+            System.out.println("Login user is not null");
             String encodedSalt = user.getSalt();
             String hashedPassword = hashService.getHashedValue(password, encodedSalt);
             String userPassword = user.getPassword();
             if(userPassword.equals(hashedPassword)) {
+                System.out.println("Passwords match!");
                 return new UsernamePasswordAuthenticationToken(username, password, new ArrayList<>());
             }
+            System.out.println("User passwords DO NOT MATCH");
         }
+        System.out.println("Login user is NULL");
         return null;
     }
 
