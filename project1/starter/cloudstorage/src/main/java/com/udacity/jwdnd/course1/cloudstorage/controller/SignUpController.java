@@ -13,10 +13,10 @@ package com.udacity.jwdnd.course1.cloudstorage.controller;
 @Controller
 @RequestMapping("/signup")
 public class SignUpController {
-    //private final UserService userService;
+    private final UserService userService;
 
-    public SignUpController() {//UserService userService) {
-        //this.userService = userService;
+    public SignUpController(UserService userService) {
+        this.userService = userService;
     }
 
     @GetMapping()
@@ -29,19 +29,19 @@ public class SignUpController {
     public String doSignup(@ModelAttribute User user, Model model) {
         String errorMsg = null;
         // if the username already exists
-//        if(!userService.isUsernameAvailable(user.getUsername())) {
-//            System.out.println("username is not available!");
-//            errorMsg = "Username already in use";
-//        }
-//        //otherwise, we potentially have a valid case here
-//        else {
-//            userService.createUser(user);
-//        }
+        if(!userService.isUsernameAvailable(user.getUsername())) {
+            System.out.println("username is not available!");
+            errorMsg = "Username already in use";
+        }
+        //otherwise, we potentially have a valid case here
+        else {
+            userService.createUser(user);
+        }
         // log success or error
         if (errorMsg == null) {
             model.addAttribute("signupSuccess", true);
         } else {
-            model.addAttribute("signUpError", errorMsg);
+            model.addAttribute("signupError", errorMsg);
         }
         return "signup";
     }
