@@ -13,6 +13,11 @@ public class File {
         this.contenttype = contenttype;
         this.filesize = filesize;
         this.filedata = filedata;
+        System.out.println("fileId: " + fileId + "\n" +
+                "filename: " + filename + "\n" +
+                "contenttype: " + contenttype + "\n" +
+                "filesize: " + filesize + "\n" +
+                "fileData: not printed!");
     }
 
     public Integer getFileId() {

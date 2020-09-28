@@ -11,6 +11,10 @@ public class Note {
         this.notetitle = notetitle;
         this.notedescription = notedescription;
         this.userid = userid;
+        System.out.println("noteid: " + noteid + "\n" +
+                "notetitle: " + notetitle + "\n" +
+                "notedescription: " + notedescription + "\n" +
+                "userid: " + userid + "\n");
     }
 
     public Integer getNoteid() {

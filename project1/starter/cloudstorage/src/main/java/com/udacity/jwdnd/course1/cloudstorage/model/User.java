@@ -17,7 +17,12 @@ public class User {
         this.salt = salt;
         this.firstName = firstName;
         this.lastName = lastName;
-
+        System.out.println("userID: " + userId + "\n" +
+                            "username: " + username + "\n" +
+                            "password: " + password + "\n" +
+                            "salt: " + salt + "\n" +
+                            "firstName: " + firstName + "\n" +
+                            "lastName: " + lastName);
     }
 
     public Integer getUserId() {

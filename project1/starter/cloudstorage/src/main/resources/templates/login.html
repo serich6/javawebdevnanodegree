@@ -12,12 +12,13 @@
         <div class="container justify-content-center w-25 p-3" style="background-color: #eeeeee; margin-top: 5em;">
             <h1 class="display-5">Login</h1>
             <form action="#"
+                  th:object="${loginFormData}"
                   th:action="@{/login}"
                   method="POST">
-                <div class="alert alert-danger">
+                <div id="invalidCreds-msg" th:if="${invalidCredentialsError}" class="alert alert-danger">
                     Invalid username or password
                 </div>
-                <div class="alert alert-dark">
+                <div id="logout-msg" th:if="${loggedOutSuccess}" class="alert alert-dark">
                     You have been logged out
                 </div>
                 <div class="form-group">
