@@ -2,6 +2,7 @@ package com.udacity.jwdnd.course1.cloudstorage.controller;
 
         import com.udacity.jwdnd.course1.cloudstorage.model.User;
         import com.udacity.jwdnd.course1.cloudstorage.services.UserService;
+        import org.springframework.security.core.parameters.P;
         import org.springframework.stereotype.Component;
         import org.springframework.stereotype.Controller;
         import org.springframework.ui.Model;
@@ -35,7 +36,10 @@ public class SignUpController {
         }
         //otherwise, we potentially have a valid case here
         else {
-            userService.createUser(user);
+            int result = userService.createUser(user);
+            if (result == 0) {
+                errorMsg = "ERROR: User not created via UserService!";
+            }
         }
         // log success or error
         if (errorMsg == null) {
