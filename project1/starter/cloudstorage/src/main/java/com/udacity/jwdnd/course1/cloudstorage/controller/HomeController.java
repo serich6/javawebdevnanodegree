@@ -20,7 +20,6 @@ public class HomeController {
     @PostMapping()
     public String logout(Model model) {
         System.out.println("in logout method");
-        ///loggedOutSuccess
         model.addAttribute("loggedOutSuccess", true);
         return "login";
     }

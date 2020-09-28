@@ -1,7 +1,6 @@
 package com.udacity.jwdnd.course1.cloudstorage.services;
 
 import com.udacity.jwdnd.course1.cloudstorage.mapper.UserMapper;
-import com.udacity.jwdnd.course1.cloudstorage.model.Note;
 import com.udacity.jwdnd.course1.cloudstorage.model.User;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +11,11 @@ import java.util.Base64;
 public class UserService {
     private final UserMapper userMapper;
     private final HashService hashService;
+    private final NoteService noteService;
 
-    public UserService(UserMapper userMapper, HashService hashService) {
+    public UserService(UserMapper userMapper, HashService hashService, NoteService noteService) {
+        this.noteService = noteService;
+        System.out.println("Creating a user service");
         this.userMapper = userMapper;
         this.hashService = hashService;
     }
@@ -34,5 +36,18 @@ public class UserService {
     public User getUser(String username) {
         System.out.println("getting user with name: " + username);
         return userMapper.getUser(username);
+    }
+
+    // TODO: See if these are the correct approach
+    public void getUserNotes() {
+
+    }
+
+    public void getUserFiles() {
+
+    }
+
+    public void getUserCredentials() {
+
     }
 }

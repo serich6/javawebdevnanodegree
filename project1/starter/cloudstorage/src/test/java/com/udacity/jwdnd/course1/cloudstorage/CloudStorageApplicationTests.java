@@ -40,6 +40,63 @@ class CloudStorageApplicationTests {
 		}
 	}
 
+	/// REQUIRED TESTS
+	/// 1- Verify that an unauthorized user can only access the login and signup page
+	@Test
+	public void checkUnauthorizedAccess() {
+
+	}
+
+	/// 2 - Sign up a new user, log in, check the homepage is present. Log out, verify home page can't be accessed
+	@Test
+	public void checkHomeScreenAccess() {
+
+	}
+
+	/// 3 - Create a note, verify it displays
+	@Test
+	public void createAndDisplayNote() {
+
+	}
+
+	/// 4 - Edits an existing note and check display
+	@Test
+	public void editAndDisplayNote() {
+
+	}
+
+	/// 5 - Delete note and check list
+	@Test
+	public void deleteNoteInList() {
+
+	}
+
+	/// 6 - Create credentials, verify diplayed
+	@Test
+	public void createAndDisplayCredentials() {
+
+	}
+	/// 7 - View existing creds, verify viewable password is unencrypted, edit the cred, verify changes displayed
+	@Test
+	public void viewPasswordAndEditCredentials() {
+
+	}
+	/// 8 - Delete existing set of creds, verify the creds are no longer displayed.
+	@Test
+	public void deleteCredentials() {
+
+	}
+
+
+	/********************************
+	 *
+	 *
+	 * NON RUBRIC TESTS BELOW HERE
+	 *
+	 *
+	 ********************************/
+
+
 	public void signUpTestUser(User user) {
 		driver.findElement(By.id("inputFirstName")).sendKeys(user.getFirstName());
 		driver.findElement(By.id("inputLastName")).sendKeys(user.getLastName());
@@ -65,18 +122,6 @@ class CloudStorageApplicationTests {
 		driver.get("http://localhost:" + this.port + "/signup");
 		Assertions.assertEquals("Sign Up", driver.getTitle());
 	}
-
-//	@Test
-//	public void getHomePageTOBEENABLED() {
-//		driver.get("http://localhost:" + this.port + "/home");
-//		Assertions.assertEquals("Login", driver.getTitle());
-//	}
-
-//	@Test
-//	public void getResultPageTOBEEBABLED() {
-//		driver.get("http://localhost:" + this.port + "/result");
-//		Assertions.assertEquals("Result", driver.getTitle());
-//	}
 
 	@Test
 	public void getHomePageTOBEREMOVED() {
