@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="nav-notes" role="tabpanel" aria-labelledby="nav-notes-tab">
-                        <button style="margin: 0.25em;" type="button" class="btn btn-info float-right" onclick="showNoteModal()">
+                        <button id="addNewNoteButton" style="margin: 0.25em;" type="button" class="btn btn-info float-right" onclick="showNoteModal()">
                             + Add a New Note
                         </button>
 
@@ -82,8 +82,8 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <button type="button" class="btn btn-success">Edit</button>
-                                            <a class="btn btn-danger">Delete</a>
+                                            <button type="button" id="editNoteButton" class="btn btn-success">Edit</button>
+                                            <a id="deleteNoteButton" class="btn btn-danger">Delete</a>
                                         </td>
                                         <th scope="row">Example Note Title</th>
                                         <td>Example Note Description </td>
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="nav-credentials" role="tabpanel" aria-labelledby="nav-credentials-tab">
-                        <button style="margin: 0.25em;" type="button" class="btn btn-info float-right" onclick="showCredentialModal()">
+                        <button style="margin: 0.25em;" id="addNewCredentialButton" type="button" class="btn btn-info float-right" onclick="showCredentialModal()">
                             + Add a New Credential
                         </button>
 
@@ -144,8 +144,8 @@
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <button type="button" class="btn btn-success">Edit</button>
-                                        <a class="btn btn-danger">Delete</a>
+                                        <button type="button" id="editCredentialButton" class="btn btn-success">Edit</button>
+                                        <a id="deleteCredentialButton" class="btn btn-danger">Delete</a>
                                     </td>
                                     <th scope="row">Example Credential URL</th>
                                     <td>Example Credential Username</td>

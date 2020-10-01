@@ -54,32 +54,44 @@ class CloudStorageApplicationTests {
 		driver.findElement(By.id("loginButton")).click();
 	}
 
-	public void stageUserAndLogin() {
-
+	public void stageUserAndLogin(User user) {
+		driver.get("http://localhost:" + this.port + "/login");
+		signUpTestUser(user);
+		driver.get("http://localhost:" + this.port + "/signup");
+		enterLoginCreds(user);
 	}
 
-	public void createNote() {
-
+	public void createNote(Note note) {
+		driver.findElement(By.id("nav-notes-tab")).click();
+		driver.findElement(By.id("addNewNoteButton")).click();
+		driver.findElement(By.id("note-title")).sendKeys(note.getNotetitle());
+		driver.findElement(By.id("note-description")).sendKeys(note.getNotedescription());
+		driver.findElement(By.id("noteSubmit")).click();
 	}
 
-	public void editNote() {
-
+	public void editNote(Note note) {
+		driver.findElement(By.id("editNoteButton")).click();
 	}
 
-	public void deleteNote() {
-
+	public void deleteNote(Note note) {
+		driver.findElement(By.id("deleteNoteButton")).click();
 	}
 
-	public void createCredential() {
-
+	public void createCredential(Credential cred) {
+		driver.findElement(By.id("nav-credentials-tab")).click();
+		driver.findElement(By.id("addNewCredentialButton")).click();
+		driver.findElement(By.id("credential-url")).sendKeys(cred.getUrl());
+		driver.findElement(By.id("credential-username")).sendKeys(cred.getUsername());
+		driver.findElement(By.id("credential-password")).sendKeys(cred.getPassword());
+		driver.findElement(By.id("credentialSubmit")).click();
 	}
 
-	public void editCredential() {
-
+	public void editCredential(Credential cred) {
+		driver.findElement(By.id("editCredentialButton")).click();
 	}
 
-	public void deleteCredential() {
-
+	public void deleteCredential(Credential cred) {
+		driver.findElement(By.id("deleteCredentialButton")).click();
 	}
 
 	/// REQUIRED TESTS
@@ -119,7 +131,8 @@ class CloudStorageApplicationTests {
 		signUpTestUser(user);
 		driver.get("http://localhost:" + this.port + "/login");
 		enterLoginCreds(user);
-		createNote();
+		Note note = new Note(1, "testTitle", "testDesc", 1);
+		createNote(note);
 		// Added for now as TC is in progress
 		Assertions.assertTrue(false);
 	}
@@ -127,43 +140,53 @@ class CloudStorageApplicationTests {
 	/// 4 - Edits an existing note and check display
 	@Test
 	public void editAndDisplayNote() {
-		stageUserAndLogin();
-		createNote();
-		editNote();
+		User user = new User(1, "username", "pass", "1234", "first", "last");
+		stageUserAndLogin(user);
+		Note note = new Note(1, "testTitle", "testDesc", 1);
+		createNote(note);
+		editNote(note);
 		Assertions.assertTrue(false);
 	}
 
 	/// 5 - Delete note and check list
 	@Test
 	public void deleteNoteInList() {
-		stageUserAndLogin();
-		createNote();
-		deleteNote();
+		User user = new User(1, "username", "pass", "1234", "first", "last");
+		stageUserAndLogin(user);
+		Note note = new Note(1, "testTitle", "testDesc", 1);
+		createNote(note);
+		deleteNote(note);
 		Assertions.assertTrue(false);
 	}
 
 	/// 6 - Create credentials, verify displayed
 	@Test
 	public void createAndDisplayCredentials() {
-		stageUserAndLogin();
-		createCredential();
+		User user = new User(1, "username", "pass", "1234", "first", "last");
+		stageUserAndLogin(user);
+		Credential credential = new Credential(1, "google.com", "testUser", "abc", "pwd", 1);
+		createCredential(credential);
 		Assertions.assertTrue(false);
 	}
 	/// 7 - View existing creds, verify viewable password is unencrypted, edit the cred, verify changes displayed
 	@Test
 	public void viewPasswordAndEditCredentials() {
-		stageUserAndLogin();
-		createCredential();
+		User user = new User(1, "username", "pass", "1234", "first", "last");
+		stageUserAndLogin(user);
+		Credential credential = new Credential(1, "google.com", "testUser", "abc", "pwd", 1);
+		createCredential(credential);
 		// TODO: do an assertions for enc
-		editCredential();
+		editCredential(credential);
 		Assertions.assertTrue(false);
 	}
 	/// 8 - Delete existing set of creds, verify the creds are no longer displayed.
 	@Test
 	public void deleteCredentials() {
-		stageUserAndLogin();
-		createCredential();
-		deleteCredential();
+		User user = new User(1, "username", "pass", "1234", "first", "last");
+		stageUserAndLogin(user);
+		Credential credential = new Credential(1, "google.com", "testUser", "abc", "pwd", 1);
+		createCredential(credential);
+		deleteCredential(credential);
 		Assertions.assertTrue(false);
 	}
 
@@ -281,19 +304,19 @@ class CloudStorageApplicationTests {
 		Assertions.assertEquals("Login", driver.getTitle());
 	}
 
-	public void loginFailureBadUser() {
-		Assertions.assertTrue(false);
-	}
-
-	public void loginFailureBadPassword() {
-		Assertions.assertTrue(false);
-	}
-
-	public void loginFailureUserDoesntExist() {
-		Assertions.assertTrue(false);
-	}
-
-	public void addFile() {
-		Assertions.assertTrue(false);
-	}
+//	public void loginFailureBadUser() {
+//		Assertions.assertTrue(false);
+//	}
+//
+//	public void loginFailureBadPassword() {
+//		Assertions.assertTrue(false);
+//	}
+//
+//	public void loginFailureUserDoesntExist() {
+//		Assertions.assertTrue(false);
+//	}
+//
+//	public void addFile() {
+//		Assertions.assertTrue(false);
+//	}
 }
