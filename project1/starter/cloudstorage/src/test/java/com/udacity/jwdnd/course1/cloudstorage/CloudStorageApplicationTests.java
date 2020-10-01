@@ -40,63 +40,6 @@ class CloudStorageApplicationTests {
 		}
 	}
 
-	/// REQUIRED TESTS
-	/// 1- Verify that an unauthorized user can only access the login and signup page
-	@Test
-	public void checkUnauthorizedAccess() {
-
-	}
-
-	/// 2 - Sign up a new user, log in, check the homepage is present. Log out, verify home page can't be accessed
-	@Test
-	public void checkHomeScreenAccess() {
-
-	}
-
-	/// 3 - Create a note, verify it displays
-	@Test
-	public void createAndDisplayNote() {
-
-	}
-
-	/// 4 - Edits an existing note and check display
-	@Test
-	public void editAndDisplayNote() {
-
-	}
-
-	/// 5 - Delete note and check list
-	@Test
-	public void deleteNoteInList() {
-
-	}
-
-	/// 6 - Create credentials, verify diplayed
-	@Test
-	public void createAndDisplayCredentials() {
-
-	}
-	/// 7 - View existing creds, verify viewable password is unencrypted, edit the cred, verify changes displayed
-	@Test
-	public void viewPasswordAndEditCredentials() {
-
-	}
-	/// 8 - Delete existing set of creds, verify the creds are no longer displayed.
-	@Test
-	public void deleteCredentials() {
-
-	}
-
-
-	/********************************
-	 *
-	 *
-	 * NON RUBRIC TESTS BELOW HERE
-	 *
-	 *
-	 ********************************/
-
-
 	public void signUpTestUser(User user) {
 		driver.findElement(By.id("inputFirstName")).sendKeys(user.getFirstName());
 		driver.findElement(By.id("inputLastName")).sendKeys(user.getLastName());
@@ -110,6 +53,128 @@ class CloudStorageApplicationTests {
 		driver.findElement(By.id("inputPassword")).sendKeys(user.getPassword());
 		driver.findElement(By.id("loginButton")).click();
 	}
+
+	public void stageUserAndLogin() {
+
+	}
+
+	public void createNote() {
+
+	}
+
+	public void editNote() {
+
+	}
+
+	public void deleteNote() {
+
+	}
+
+	public void createCredential() {
+
+	}
+
+	public void editCredential() {
+
+	}
+
+	public void deleteCredential() {
+
+	}
+
+	/// REQUIRED TESTS
+	/// 1- Verify that an unauthorized user can only access the login and signup page
+	@Test
+	public void checkUnauthorizedAccess() {
+		driver.get("http://localhost:" + this.port + "/login");
+		Assertions.assertEquals("Login", driver.getTitle());
+		driver.get("http://localhost:" + this.port + "/signup");
+		Assertions.assertEquals("Sign Up", driver.getTitle());
+		driver.get("http://localhost:" + this.port + "/home");
+		Assertions.assertEquals("Login", driver.getTitle());
+		driver.get("http://localhost:" + this.port + "/result");
+		Assertions.assertEquals("Login", driver.getTitle());
+	}
+
+	/// 2 - Sign up a new user, log in, check the homepage is present. Log out, verify home page can't be accessed
+	@Test
+	public void checkHomeScreenAccess() {
+		driver.get("http://localhost:" + this.port + "/signup");
+		User user = new User(1, "username", "pass", "1234", "first", "last");
+		signUpTestUser(user);
+		driver.get("http://localhost:" + this.port + "/login");
+		enterLoginCreds(user);
+		Assertions.assertEquals("Home", driver.getTitle());
+		driver.findElement(By.id("logoutButton")).click();
+		Assertions.assertEquals("Login", driver.getTitle());
+		driver.get("http://localhost:" + this.port + "/home");
+		Assertions.assertEquals("Login", driver.getTitle());
+	}
+
+	/// 3 - Create a note, verify it displays
+	@Test
+	public void createAndDisplayNote() {
+		driver.get("http://localhost:" + this.port + "/signup");
+		User user = new User(1, "username", "pass", "1234", "first", "last");
+		signUpTestUser(user);
+		driver.get("http://localhost:" + this.port + "/login");
+		enterLoginCreds(user);
+		createNote();
+		// Added for now as TC is in progress
+		Assertions.assertTrue(false);
+	}
+
+	/// 4 - Edits an existing note and check display
+	@Test
+	public void editAndDisplayNote() {
+		stageUserAndLogin();
+		createNote();
+		editNote();
+		Assertions.assertTrue(false);
+	}
+
+	/// 5 - Delete note and check list
+	@Test
+	public void deleteNoteInList() {
+		stageUserAndLogin();
+		createNote();
+		deleteNote();
+		Assertions.assertTrue(false);
+	}
+
+	/// 6 - Create credentials, verify displayed
+	@Test
+	public void createAndDisplayCredentials() {
+		stageUserAndLogin();
+		createCredential();
+		Assertions.assertTrue(false);
+	}
+	/// 7 - View existing creds, verify viewable password is unencrypted, edit the cred, verify changes displayed
+	@Test
+	public void viewPasswordAndEditCredentials() {
+		stageUserAndLogin();
+		createCredential();
+		// TODO: do an assertions for enc
+		editCredential();
+		Assertions.assertTrue(false);
+	}
+	/// 8 - Delete existing set of creds, verify the creds are no longer displayed.
+	@Test
+	public void deleteCredentials() {
+		stageUserAndLogin();
+		createCredential();
+		deleteCredential();
+		Assertions.assertTrue(false);
+	}
+
+
+	/********************************
+	 *
+	 *
+	 * NON RUBRIC TESTS BELOW HERE
+	 *
+	 *
+	 ********************************/
 
 	@Test
 	public void getLoginPage() {
@@ -217,27 +282,18 @@ class CloudStorageApplicationTests {
 	}
 
 	public void loginFailureBadUser() {
-
+		Assertions.assertTrue(false);
 	}
 
 	public void loginFailureBadPassword() {
-
+		Assertions.assertTrue(false);
 	}
 
 	public void loginFailureUserDoesntExist() {
-
+		Assertions.assertTrue(false);
 	}
 
 	public void addFile() {
-
+		Assertions.assertTrue(false);
 	}
-
-	public void addNote() {
-
-	}
-
-	public void addCredential() {
-
-	}
-
 }
