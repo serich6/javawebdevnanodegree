@@ -25,14 +25,15 @@ public class NoteService {
         return noteMapper.getNote(user.getUserId().toString());
     }
 
-    public Integer createNote(Note note) {
+    public Integer saveNote(Note note) {
+        Integer id = note.getNoteid();
+        if (id == null) {
+            id = noteMapper.insert(note);
+        } else {
+            noteMapper.update(note);
+        }
         System.out.println("Called create note");
-        return noteMapper.insert(note);
-    }
-
-    public Integer editNote(Note note) {
-        System.out.println("Called edit note");
-        return noteMapper.update(note);
+        return id;
     }
 
     public Integer deleteNote(Note note) {

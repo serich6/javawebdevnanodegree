@@ -5,19 +5,11 @@ public class File {
     private String filename;
     private String contenttype;
     private String filesize;
+    private Integer userId;
     private String filedata;
 
-    public File(Integer fileId, String filename, String contenttype, String filesize, String filedata) {
-        this.fileId = fileId;
-        this.filename = filename;
-        this.contenttype = contenttype;
-        this.filesize = filesize;
-        this.filedata = filedata;
-        System.out.println("fileId: " + fileId + "\n" +
-                "filename: " + filename + "\n" +
-                "contenttype: " + contenttype + "\n" +
-                "filesize: " + filesize + "\n" +
-                "fileData: not printed!");
+    public File() {
+
     }
 
     public Integer getFileId() {

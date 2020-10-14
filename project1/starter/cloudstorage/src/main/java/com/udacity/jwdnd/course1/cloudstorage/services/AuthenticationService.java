@@ -31,11 +31,13 @@ public class AuthenticationService implements AuthenticationProvider {
             String encodedSalt = user.getSalt();
             String hashedPassword = hashService.getHashedValue(password, encodedSalt);
             String userPassword = user.getPassword();
-            if(userPassword.equals(hashedPassword)) {
-                System.out.println("Passwords match!");
-                return new UsernamePasswordAuthenticationToken(username, password, new ArrayList<>());
-            }
-            System.out.println("User passwords DO NOT MATCH");
+            // TODO: Take this line out and uncomment the actual user/pwd check
+            return new UsernamePasswordAuthenticationToken(username, password, new ArrayList<>());
+//            if(userPassword.equals(hashedPassword)) {
+//                System.out.println("Passwords match!");
+//                return new UsernamePasswordAuthenticationToken(username, password, new ArrayList<>());
+//            }
+//            System.out.println("User passwords DO NOT MATCH");
         }
         System.out.println("Login user is NULL");
         return null;
