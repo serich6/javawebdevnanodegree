@@ -10,19 +10,12 @@ public class User {
 
 
     public User(Integer userId, String username, String password, String salt, String firstName, String lastName) {
-        System.out.println("Creating user from data");
         this.userId = userId;
         this.username = username;
         this.password = password;
         this.salt = salt;
         this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("userID: " + userId + "\n" +
-                            "username: " + username + "\n" +
-                            "password: " + password + "\n" +
-                            "salt: " + salt + "\n" +
-                            "firstName: " + firstName + "\n" +
-                            "lastName: " + lastName);
     }
 
     public Integer getUserId() {

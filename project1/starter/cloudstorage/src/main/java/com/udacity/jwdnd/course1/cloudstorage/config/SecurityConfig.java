@@ -24,19 +24,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
-        // TODO: remove home from here, obvs
-        http.authorizeRequests()
-                .antMatchers("/signup", "/home", "/h2*", "/css/**", "/js/**").permitAll()
+        http.authorizeRequests().antMatchers("/signup", "/css/**", "/js/**").permitAll()
                 .anyRequest().authenticated();
 
-        http.formLogin()
-                .loginPage("/login")
-                .permitAll();
+        http.formLogin().loginPage("/login").permitAll();
 
-        http.formLogin()
-                .defaultSuccessUrl("/home", true);
+        http.formLogin().defaultSuccessUrl("/home", true);
     }
-
-
 }

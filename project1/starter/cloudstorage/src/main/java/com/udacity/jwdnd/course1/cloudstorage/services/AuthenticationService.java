@@ -37,7 +37,7 @@ public class AuthenticationService implements AuthenticationProvider {
 //                System.out.println("Passwords match!");
 //                return new UsernamePasswordAuthenticationToken(username, password, new ArrayList<>());
 //            }
-//            System.out.println("User passwords DO NOT MATCH");
+           // System.out.println("User passwords DO NOT MATCH:" + userPassword + " and " + hashedPassword);
         }
         System.out.println("Login user is NULL");
         return null;
