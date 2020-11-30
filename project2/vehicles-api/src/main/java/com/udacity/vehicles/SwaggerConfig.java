@@ -1,4 +1,7 @@
 package com.udacity.vehicles;
+/**
+ * Code taken from class resources, lesson 7
+ */
 
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -29,13 +32,12 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfo(
-                "Location API",
-                "This API returns a list of airport locations.",
+                "Vehicle API",
+                "This API returns a list of cars.",
                 "1.0",
                 "http://www.udacity.com/tos",
-                new Contact("Kesha Williams", "www.udacity.com", "myeaddress@udacity.com"),
+                new Contact("Samantha Rich", "www.udacity.com", "myeaddress@udacity.com"),
                 "License of API", "http://www.udacity.com/license", Collections.emptyList());
     }
-
 }
 
