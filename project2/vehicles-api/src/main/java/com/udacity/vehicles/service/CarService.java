@@ -87,7 +87,6 @@ public class CarService {
      * @param id the ID number of the car to delete
      */
     public void delete(Long id) {
-        Car car = null;
         Optional<Car> foundCar = repository.findById(id);
         if(foundCar.isPresent()) {
             repository.deleteById(id);

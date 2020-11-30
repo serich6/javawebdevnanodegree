@@ -97,9 +97,12 @@ public class CarControllerTest {
          *   below (the vehicle will be the first in the list).
          */
         mvc.perform(get(new URI("/cars")))
-                .andExpect(status().isOk());
-
-        // TODO: add more here
+                .andExpect(status().isOk())
+                //check content type
+                .andExpect(content().contentType("application/hal+json;charset=UTF-8"))
+                // check first element
+                .andExpect(jsonPath("$._embedded.carList[0]._links.self.href")
+                        .value("http://localhost/cars/1"));
     }
 
     /**
