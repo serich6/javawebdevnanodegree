@@ -116,8 +116,6 @@ public class CarControllerTest {
          *   a vehicle by ID. This should utilize the car from `getCar()` below.
          */
         mvc.perform(get(new URI("/cars/1"))).andExpect(status().isOk());
-
-        // TODO: add more here.
     }
 
     /**
