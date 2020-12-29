@@ -2,10 +2,7 @@ package com.udacity.jdnd.course3.critter.entity;
 
 import com.udacity.jdnd.course3.critter.entity.entityEnums.PetType;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="pet")
@@ -15,6 +12,8 @@ public class Pet {
     private Long id;
     private String name;
     private PetType type;
+    @ManyToOne
+    private Customer owner;
 
     public Pet() {
 
@@ -47,5 +46,13 @@ public class Pet {
 
     public void setType(PetType type) {
         this.type = type;
+    }
+
+    public void setOwner(Customer owner) {
+        this.owner = owner;
+    }
+
+    public Customer getOwner() {
+        return owner;
     }
 }

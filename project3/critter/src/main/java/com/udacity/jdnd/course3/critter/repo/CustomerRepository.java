@@ -6,5 +6,5 @@ import org.springframework.data.relational.core.sql.In;
 import org.springframework.data.repository.CrudRepository;
 
 @ReportCreation
-public interface CustomerRepository extends CrudRepository<Customer, Integer> {
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
 }

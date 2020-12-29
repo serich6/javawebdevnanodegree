@@ -1,11 +1,15 @@
 package com.udacity.jdnd.course3.critter.service;
 
+import com.udacity.jdnd.course3.critter.dto.CustomerDTO;
 import com.udacity.jdnd.course3.critter.dto.EmployeeDTO;
+import com.udacity.jdnd.course3.critter.entity.Customer;
 import com.udacity.jdnd.course3.critter.entity.Employee;
 import com.udacity.jdnd.course3.critter.repo.CustomerRepository;
 import com.udacity.jdnd.course3.critter.repo.EmployeeRepository;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
@@ -21,6 +25,8 @@ public class UserService {
         this.petService = petService;
     }
 
+    // EMPLOYEE METHODS
+
     public Employee addEmployee(EmployeeDTO employeeDTO) {
         Employee employee = employeeRepository.save(new Employee(employeeDTO.getName(),
                                                     employeeDTO.getDaysAvailable(),
@@ -35,5 +41,30 @@ public class UserService {
     public Employee getEmployee(Long id){
         Employee employee = employeeRepository.findById(id).get();
         return employee;
+    }
+
+    // CUSTOMER METHODS
+
+    public Customer addCustomer(CustomerDTO customerDTO) {
+        Customer customer = customerRepository.save(new Customer(customerDTO.getName(),customerDTO.getPhoneNumber()));
+        return customer;
+    }
+
+    public Customer getCustomerDTO(Long id){
+        return getCustomerDTO(id);
+    }
+
+    public Customer getCustomer(Long id){
+        Customer customer = customerRepository.findById(id).get();
+        return customer;
+    }
+
+    public List<Customer> getAllCustomers() {
+        List<Customer> customers = (List<Customer>) customerRepository.findAll();
+        return customers;
+    }
+
+    public Customer getCustomerByPet(long petId) {
+       return petService.getOwnerByPetID(petId);
     }
 }

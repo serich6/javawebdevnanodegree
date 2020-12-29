@@ -12,6 +12,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.DayOfWeek;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -32,17 +33,25 @@ public class UserController {
 
     @PostMapping("/customer")
     public CustomerDTO saveCustomer(@RequestBody CustomerDTO customerDTO){
-        throw new UnsupportedOperationException();
+        return convertCustomerToDTO(userService.addCustomer(customerDTO));
     }
 
     @GetMapping("/customer")
     public List<CustomerDTO> getAllCustomers(){
-        throw new UnsupportedOperationException();
+        //get the list of customers from user service
+        // for each one, convert and add to a dto array
+        // return the dto array
+        List<CustomerDTO> dtos = new ArrayList<>();
+        List<Customer> customers = userService.getAllCustomers();
+        for(Customer customer:customers) {
+            dtos.add(convertCustomerToDTO(customer));
+        }
+        return dtos;
     }
 
     @GetMapping("/customer/pet/{petId}")
     public CustomerDTO getOwnerByPet(@PathVariable long petId){
-        throw new UnsupportedOperationException();
+        return convertCustomerToDTO(userService.getCustomerByPet(petId));
     }
 
     @PostMapping("/employee")
@@ -57,23 +66,30 @@ public class UserController {
 
     @PutMapping("/employee/{employeeId}")
     public void setAvailability(@RequestBody Set<DayOfWeek> daysAvailable, @PathVariable long employeeId) {
+        // TODO
         throw new UnsupportedOperationException();
     }
 
     @GetMapping("/employee/availability")
     public List<EmployeeDTO> findEmployeesForService(@RequestBody EmployeeRequestDTO employeeDTO) {
+        // TODO
         throw new UnsupportedOperationException();
     }
 
+    /*
+    // CONVERSIONS
+     */
+
+    // REFERENCE: conversions from lesson 2, video 17.1
     private EmployeeDTO convertEmployeeToTDO(Employee employee){
         EmployeeDTO dto = new EmployeeDTO();
         BeanUtils.copyProperties(employee, dto);
         return dto;
     }
 
-//    private CustomerDTO convertCustomerToDTO(Customer customer) {
-//        CustomerDTO dto = new CustomerDTO();
-//        BeanUtils.copyProperties(customer, dto);
-//        return dto;
-//    }
+    private CustomerDTO convertCustomerToDTO(Customer customer) {
+        CustomerDTO dto = new CustomerDTO();
+        BeanUtils.copyProperties(customer, dto);
+        return dto;
+    }
 }
