@@ -9,7 +9,9 @@ import com.udacity.jdnd.course3.critter.repo.EmployeeRepository;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import java.time.DayOfWeek;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class UserService {
@@ -41,6 +43,22 @@ public class UserService {
     public Employee getEmployee(Long id){
         Employee employee = employeeRepository.findById(id).get();
         return employee;
+    }
+
+    public void setAvailability(Set<DayOfWeek> daysAvailable, long employeeId) {
+        // get the user by id
+        Employee employee = employeeRepository.findById(employeeId).get();
+        // if we don't have any set days, just replace the set
+        if (employee.getDaysAvailable().isEmpty()) {
+            employee.setDaysAvailable(daysAvailable);
+        }
+        // if we DO have existing days, just add the diff? for update case?
+        else {
+
+        }
+
+        // save the updated employee info
+        employeeRepository.save(employee);
     }
 
     // CUSTOMER METHODS
