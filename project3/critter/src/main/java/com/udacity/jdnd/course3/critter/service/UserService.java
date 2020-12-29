@@ -49,7 +49,7 @@ public class UserService {
         // get the user by id
         Employee employee = employeeRepository.findById(employeeId).get();
         // if we don't have any set days, just replace the set
-        if (employee.getDaysAvailable().isEmpty()) {
+        if (employee.getDaysAvailable()== null) {
             employee.setDaysAvailable(daysAvailable);
         }
         // if we DO have existing days, just add the diff? for update case?
