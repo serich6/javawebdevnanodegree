@@ -22,8 +22,8 @@ public class PetController {
     }
     @PostMapping
     public PetDTO savePet(@RequestBody PetDTO petDTO) {
-        throw new UnsupportedOperationException();
-        //return convertPEToTDO(petService.addPet(petDTO));
+        //throw new UnsupportedOperationException();
+        return convertPEToTDO(petService.addPet(petDTO));
     }
 
     @GetMapping("/{petId}")

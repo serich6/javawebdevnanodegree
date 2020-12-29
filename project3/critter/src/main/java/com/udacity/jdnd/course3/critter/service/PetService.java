@@ -21,8 +21,8 @@ public class PetService {
         return pet.getOwner();
     }
 
-//    public Pet addPet(PetDTO petDTO) {
-//        //get the customer for this pet
-//        // save with the customer info
-//    }
+    public Pet addPet(PetDTO petDTO) {
+        Pet pet = petRepository.save(new Pet(petDTO.getName(), petDTO.getType()));
+        return pet;
+    }
 }

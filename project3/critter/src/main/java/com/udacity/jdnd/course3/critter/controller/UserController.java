@@ -5,6 +5,7 @@ import com.udacity.jdnd.course3.critter.dto.EmployeeDTO;
 import com.udacity.jdnd.course3.critter.dto.EmployeeRequestDTO;
 import com.udacity.jdnd.course3.critter.entity.Customer;
 import com.udacity.jdnd.course3.critter.entity.Employee;
+import com.udacity.jdnd.course3.critter.entity.entityEnums.EmployeeSkill;
 import com.udacity.jdnd.course3.critter.service.UserService;
 import org.checkerframework.checker.units.qual.C;
 import org.h2.engine.User;
@@ -71,10 +72,23 @@ public class UserController {
 
     @GetMapping("/employee/availability")
     public List<EmployeeDTO> findEmployeesForService(@RequestBody EmployeeRequestDTO employeeDTO) {
-        // Get the days needed
-        // Get employees available on those days w/skills
-        // TODO
-        throw new UnsupportedOperationException();
+        // Get the days/skills needed
+        DayOfWeek day = employeeDTO.getDate().getDayOfWeek();
+        Set<EmployeeSkill> skills = employeeDTO.getSkills();
+
+        // Get employees available on those days w/skills, add then to a return struct
+        List<EmployeeDTO> employeeDTOS = new ArrayList<>();
+
+        List<Employee> employees = userService.getAllEmployees();
+
+        for(Employee employee:employees) {
+            //if the skills & days working match (sets), add it to the array
+            if(employee.getSkills().containsAll(skills) && employee.getDaysAvailable().contains(day)){
+                System.out.println("Found a matching employee");
+                employeeDTOS.add(convertEmployeeToTDO(employee));
+            }
+        }
+        return employeeDTOS;
     }
 
     /*

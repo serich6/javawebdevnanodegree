@@ -85,4 +85,9 @@ public class UserService {
     public Customer getCustomerByPet(long petId) {
        return petService.getOwnerByPetID(petId);
     }
+
+    public List<Employee> getAllEmployees() {
+        List<Employee> employees = (List<Employee>) employeeRepository.findAll();
+        return employees;
+    }
 }
