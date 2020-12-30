@@ -3,6 +3,7 @@ package com.udacity.jdnd.course3.critter.entity;
 import com.udacity.jdnd.course3.critter.entity.entityEnums.PetType;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name="pet")
@@ -10,13 +11,19 @@ public class Pet {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
     private PetType type;
+    private String name;
+    // extra fields from dto
+    private LocalDate birthDate;
+    private String notes;
     @ManyToOne
     private Customer owner;
 
-    public Pet() {
-
+    // Added a separate constructor for PetService-> addPet. Check to see if the other is still in use?
+    public Pet(String name, PetType type, Customer owner) {
+        this.name = name;
+        this.type = type;
+        this.owner = owner;
     }
 
     public Pet(String name, PetType type) {

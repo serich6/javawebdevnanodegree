@@ -3,19 +3,20 @@ package com.udacity.jdnd.course3.critter.entity;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name="customer")
 public class Customer {
     @Id
-    @GeneratedValue
+    @GeneratedValue//(strategy = GenerationType.TABLE)
     private Long id;
     private String name;
     private String phone;
 
     @OneToMany
-    private Set<Pet> pets;
+    private List<Pet> pets;
 
     public Customer() {
 
@@ -48,5 +49,13 @@ public class Customer {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public List<Pet> getPets() {
+        return pets;
+    }
+
+    public void setPets(List<Pet> pets) {
+        this.pets = pets;
     }
 }

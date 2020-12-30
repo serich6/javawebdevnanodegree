@@ -34,6 +34,7 @@ public class UserController {
 
     @PostMapping("/customer")
     public CustomerDTO saveCustomer(@RequestBody CustomerDTO customerDTO){
+        System.out.println("id in Save customer: "+ customerDTO.getId());
         return convertCustomerToDTO(userService.addCustomer(customerDTO));
     }
 
@@ -79,6 +80,7 @@ public class UserController {
         // Get employees available on those days w/skills, add then to a return struct
         List<EmployeeDTO> employeeDTOS = new ArrayList<>();
 
+        // TODO: Is there a quicker/more efficient way to do this?
         List<Employee> employees = userService.getAllEmployees();
 
         for(Employee employee:employees) {

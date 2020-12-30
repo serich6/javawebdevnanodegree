@@ -33,10 +33,12 @@ public class PetDTO {
     }
 
     public long getOwnerId() {
+        System.out.println("getting owner id: "+ ownerId);
         return ownerId;
     }
 
     public void setOwnerId(long ownerId) {
+        System.out.println("Setting owner id: " + ownerId);
         this.ownerId = ownerId;
     }
 
