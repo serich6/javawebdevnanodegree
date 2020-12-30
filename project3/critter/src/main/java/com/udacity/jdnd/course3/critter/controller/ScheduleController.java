@@ -43,17 +43,35 @@ public class ScheduleController {
 
     @GetMapping("/pet/{petId}")
     public List<ScheduleDTO> getScheduleForPet(@PathVariable long petId) {
-        throw new UnsupportedOperationException();
+        List<ScheduleDTO> dtos = new ArrayList<>();
+        List<Schedule> schedules = scheduleService.getSchedulesForPet(petId);
+        for(Schedule s:schedules) {
+            dtos.add(convertScheduleToDTO(s));
+        }
+        return dtos;
     }
 
     @GetMapping("/employee/{employeeId}")
     public List<ScheduleDTO> getScheduleForEmployee(@PathVariable long employeeId) {
-        throw new UnsupportedOperationException();
+        System.out.println("Getting schedules for employee with id:" + employeeId);
+        List<ScheduleDTO> dtos = new ArrayList<>();
+        List<Schedule> schedules = scheduleService.getSchedulesForEmployee(employeeId);
+        System.out.println("Schedules has this many entries: " + schedules.stream().count());
+        for(Schedule s:schedules) {
+            dtos.add(convertScheduleToDTO(s));
+        }
+        System.out.println("Found this many schedules:" + dtos.stream().count());
+        return dtos;
     }
 
     @GetMapping("/customer/{customerId}")
     public List<ScheduleDTO> getScheduleForCustomer(@PathVariable long customerId) {
-        throw new UnsupportedOperationException();
+        List<ScheduleDTO> dtos = new ArrayList<>();
+        List<Schedule> schedules = scheduleService.getSchedulesForCustomer(customerId);
+        for(Schedule s:schedules) {
+            dtos.add(convertScheduleToDTO(s));
+        }
+        return dtos;
     }
 
     // REFERENCE: conversions from lesson 2, video 17.1

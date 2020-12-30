@@ -52,4 +52,27 @@ public class ScheduleService {
         List<Schedule> schedules = (List<Schedule>) scheduleRepository.findAll();
         return schedules;
     }
+
+    public List<Schedule> getSchedulesForPet(long id) {
+        Pet p = petService.getPet(id);
+        List<Schedule> schedules = scheduleRepository.findAllByPet(p);
+        return schedules;
+    }
+
+    public List<Schedule> getSchedulesForEmployee(long employeeId) {
+        Employee e = userService.getEmployee(employeeId);
+        List<Schedule> schedules = scheduleRepository.findAllByEmployee(e);
+        return schedules;
+    }
+
+    // This doesn't have a direct table query in schedule, so i'm just handling the logic here?
+    public List<Schedule> getSchedulesForCustomer(long customerId) {
+        Customer c = userService.getCustomer(customerId);
+        List<Pet> pets = c.getPets();
+        List<Schedule> schedules = new ArrayList<>();
+        for(Pet pet:pets) {
+            schedules.addAll(getSchedulesForPet(pet.getId()));
+        }
+        return schedules;
+    }
 }
