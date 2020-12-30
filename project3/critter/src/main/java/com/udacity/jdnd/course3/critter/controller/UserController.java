@@ -36,7 +36,6 @@ public class UserController {
 
     @PostMapping("/customer")
     public CustomerDTO saveCustomer(@RequestBody CustomerDTO customerDTO){
-        System.out.println("id in Save customer: "+ customerDTO.getId());
         return convertCustomerToDTO(userService.addCustomer(customerDTO));
     }
 

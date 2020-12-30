@@ -69,21 +69,15 @@ public class CritterFunctionalTest {
     @Test
     public void testAddPetsToCustomer() {
         CustomerDTO customerDTO = createCustomerDTO();
-        System.out.println("Created customer dto with id: " + customerDTO.getId());
         CustomerDTO newCustomer = userController.saveCustomer(customerDTO);
-        // ISSUE IS ABOVE THIS LINE WITH 0 INSTEAD OF 1 ID
-        System.out.println("Saved customer dto with id: "+ newCustomer.getId());
 
         PetDTO petDTO = createPetDTO();
-        System.out.println("Saving customer to pet with id: " + newCustomer.getId());
         petDTO.setOwnerId(newCustomer.getId());
         PetDTO newPet = petController.savePet(petDTO);
 
         //make sure pet contains customer id
         PetDTO retrievedPet = petController.getPet(newPet.getId());
         Assertions.assertEquals(retrievedPet.getId(), newPet.getId());
-        System.out.println("Owner id from test is: "+ retrievedPet.getOwnerId());
-        System.out.println("Customer id from test is: "+ newCustomer.getId());
         // Expected 0 (getOwnerId) then actual 1 (getId)
         Assertions.assertEquals(retrievedPet.getOwnerId(), newCustomer.getId());
 

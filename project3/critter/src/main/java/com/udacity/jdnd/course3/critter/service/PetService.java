@@ -36,21 +36,15 @@ public class PetService {
     public Pet addPet(PetDTO petDTO) {
         // Add the pet to the customer at this level?
         Customer owner = userService.getCustomer(petDTO.getOwnerId());
-        System.out.println("Customer in add pet is:" + owner.getName());
-        System.out.println("Customer id in add pet is:" + owner.getId());
         Pet petToSave = new Pet(petDTO.getName(), petDTO.getType(), owner);
-        System.out.println("PettoSave in save pet is:" + petToSave.getName());
         Pet pet = petRepository.save(petToSave);
-        System.out.println("Pet in save pet is:" + pet.getName());
         // add the pet to the user list as well, then I think we need to force an update?
         List<Pet> ownersPets = owner.getPets();
         // if this is the first pet, we need to set the array with just this one
         if (ownersPets== null) {
-            System.out.println("owners pets are null");
             List<Pet> petList = new ArrayList<>();
             petList.add(pet);
             owner.setPets(petList);
-            System.out.println("owners pets after adding new array + single pet:" + owner.getPets());
         } else {
             //otherwise, add the pet to the array
             ownersPets.add(pet);
@@ -71,13 +65,16 @@ public class PetService {
 //    }
 
     public Pet getPetDTO(long petId) {
-        System.out.println("getting pet with id:" + petId);
         return getPet(petId);
     }
 
     public Pet getPet(Long id){
         Pet pet = petRepository.findById(id).get();
-        System.out.println("returning pet with id:" + pet.getId());
         return pet;
+    }
+
+    public List<Pet> getAllPets() {
+        List<Pet> pets = (List<Pet>) petRepository.findAll();
+        return pets;
     }
 }

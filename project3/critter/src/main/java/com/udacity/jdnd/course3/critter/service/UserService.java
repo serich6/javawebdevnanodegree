@@ -64,9 +64,7 @@ public class UserService {
     // CUSTOMER METHODS
 
     public Customer addCustomer(CustomerDTO customerDTO) {
-        System.out.println("id in add customer BEFORE save: " + customerDTO.getId());
         Customer customer = customerRepository.save(new Customer(customerDTO.getName(),customerDTO.getPhoneNumber()));
-        System.out.println("id in add Customer AFTER repo save: " + customer.getId());
         return customer;
     }
 

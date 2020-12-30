@@ -23,7 +23,6 @@ public class PetController {
     }
     @PostMapping
     public PetDTO savePet(@RequestBody PetDTO petDTO) {
-        System.out.println("Pet id in save pet is:" +petDTO.getId());
         return convertPEToTDO(petService.addPet(petDTO));
     }
 
