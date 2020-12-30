@@ -5,6 +5,7 @@ import com.udacity.jdnd.course3.critter.dto.EmployeeDTO;
 import com.udacity.jdnd.course3.critter.dto.EmployeeRequestDTO;
 import com.udacity.jdnd.course3.critter.entity.Customer;
 import com.udacity.jdnd.course3.critter.entity.Employee;
+import com.udacity.jdnd.course3.critter.entity.Pet;
 import com.udacity.jdnd.course3.critter.entity.entityEnums.EmployeeSkill;
 import com.udacity.jdnd.course3.critter.service.UserService;
 import org.checkerframework.checker.units.qual.C;
@@ -16,6 +17,7 @@ import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Handles web requests related to Users.
@@ -107,6 +109,11 @@ public class UserController {
     private CustomerDTO convertCustomerToDTO(Customer customer) {
         CustomerDTO dto = new CustomerDTO();
         BeanUtils.copyProperties(customer, dto);
+        List<Long> petIds = new ArrayList<>();
+        if (customer.getPets() != null) {
+            petIds = customer.getPets().stream().map(Pet::getId).collect(Collectors.toList());
+        }
+        dto.setPetIds(petIds);
         return dto;
     }
 }
