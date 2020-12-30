@@ -87,7 +87,6 @@ public class UserController {
         for(Employee employee:employees) {
             //if the skills & days working match (sets), add it to the array
             if(employee.getSkills().containsAll(skills) && employee.getDaysAvailable().contains(day)){
-                System.out.println("Found a matching employee");
                 employeeDTOS.add(convertEmployeeToTDO(employee));
             }
         }

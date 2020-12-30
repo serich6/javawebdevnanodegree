@@ -53,14 +53,11 @@ public class ScheduleController {
 
     @GetMapping("/employee/{employeeId}")
     public List<ScheduleDTO> getScheduleForEmployee(@PathVariable long employeeId) {
-        System.out.println("Getting schedules for employee with id:" + employeeId);
         List<ScheduleDTO> dtos = new ArrayList<>();
         List<Schedule> schedules = scheduleService.getSchedulesForEmployee(employeeId);
-        System.out.println("Schedules has this many entries: " + schedules.stream().count());
         for(Schedule s:schedules) {
             dtos.add(convertScheduleToDTO(s));
         }
-        System.out.println("Found this many schedules:" + dtos.stream().count());
         return dtos;
     }
 

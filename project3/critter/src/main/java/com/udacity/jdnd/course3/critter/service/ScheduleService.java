@@ -30,7 +30,6 @@ public class ScheduleService {
         List<Employee> scheduleEmployees = new ArrayList<>();
         for(Employee e:allEmployees) {
             if(scheduleDTO.getEmployeeIds().contains(e.getId())){
-                System.out.println("adding employee to schedule: " + e.getId());
                 scheduleEmployees.add(e);
             }
         }
