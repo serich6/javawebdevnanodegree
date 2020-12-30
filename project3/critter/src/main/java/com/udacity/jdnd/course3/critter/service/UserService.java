@@ -9,11 +9,13 @@ import com.udacity.jdnd.course3.critter.repo.EmployeeRepository;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.time.DayOfWeek;
 import java.util.List;
 import java.util.Set;
 
 @Service
+@Transactional
 public class UserService {
     private CustomerRepository customerRepository;
     private EmployeeRepository employeeRepository;
