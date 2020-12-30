@@ -41,6 +41,7 @@ public class UserController {
 	
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
+		logger.info("Lookup user with name: " + username);
 		User user = userRepository.findByUsername(username);
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
@@ -52,6 +53,7 @@ public class UserController {
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
+		logger.info("User created with name: " + user.getUsername());
 		// make sure the pw and confirm fields match
 		if (!createUserRequest.getPassword().equals(createUserRequest.getConfirmedPassword())) {
 			logger.error("Error: confirm password field doesn't match original password");
