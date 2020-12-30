@@ -9,5 +9,6 @@ import java.util.List;
 
 @Repository
 public interface PetRepository extends CrudRepository<Pet, Long> {
+    // from project 3 rubric/spec
     List<Pet> findAllByOwner(Customer customer);
 }
