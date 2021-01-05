@@ -29,20 +29,20 @@ public class ItemController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Item> getItemById(@PathVariable Long id) {
-		logger.info("Attempting to get item with id: " + id);
+		logger.info("GET_ITEM_REQUEST: Attempting to get item with id: " + id);
 		return ResponseEntity.of(itemRepository.findById(id));
 	}
 	
 	@GetMapping("/name/{name}")
 	public ResponseEntity<List<Item>> getItemsByName(@PathVariable String name) {
-		logger.info("Attempting to get items with name: " + name);
+		logger.info("GET_ITEMS_REQUEST: Attempting to get items with name: " + name);
 		List<Item> items = itemRepository.findByName(name);
 		if (items == null || items.isEmpty()) {
-			logger.warn("No items found with name");
+			logger.warn("ERROR: No items found with name: " + name);
 			return ResponseEntity.notFound().build();
 		}
+		logger.info("GET_ITEMS_REQUEST_SUCCESS: Item(s) found.");
 		return ResponseEntity.ok(items);
-
 	}
 	
 }

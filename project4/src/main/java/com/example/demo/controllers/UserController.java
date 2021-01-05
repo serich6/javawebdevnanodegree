@@ -41,27 +41,27 @@ public class UserController {
 	
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
-		logger.info("Lookup user with name: " + username);
+		logger.info("FIND_USER_BY_NAME_REQUEST_INITIATED: Lookup user with name: " + username);
 		User user = userRepository.findByUsername(username);
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
 	
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+		logger.info("CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: " + createUserRequest.getUsername());
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
-		logger.info("User created with name: " + user.getUsername());
 		// make sure the pw and confirm fields match
 		if (!createUserRequest.getPassword().equals(createUserRequest.getConfirmedPassword())) {
-			logger.error("Error: confirm password field doesn't match original password");
+			logger.error("ERROR: confirm password field doesn't match original password");
 			return ResponseEntity.badRequest().build();
 		}
 		// can add passcode requirements here (ex: length > 4)
 		if (createUserRequest.getPassword().length() < 5) {
-			logger.error("Error: passcode too short, must be at least 5 characters");
+			logger.error("ERROR: passcode too short, must be at least 5 characters");
 			return ResponseEntity.badRequest().build();
 		}
 
@@ -69,6 +69,7 @@ public class UserController {
 		// This step should add the saltJ
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
+		logger.info("CREATE_USER_REQUEST_SUCCESS: User created with name: " + user.getUsername());
 		return ResponseEntity.ok(user);
 	}
 	

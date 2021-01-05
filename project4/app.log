@@ -1,0 +1,936 @@
+2021-01-04 23:14:46,712 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on srich-a01.vmware.com with PID 94460 (/Users/srich/Desktop/javawebdevnanodegree/project4/target/classes started by srich in /Users/srich/Desktop/javawebdevnanodegree/project4)
+2021-01-04 23:14:46,714 DEBUG com.example.demo.SareetaApplication [main] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-01-04 23:14:46,715 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-01-04 23:14:49,072 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2021-01-04 23:14:49,072 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-01-04 23:14:49,302 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2021-01-04 23:14:49,507 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-01-04 23:14:49,767 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-01-04 23:14:49,913 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-01-04 23:14:50,047 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-01-04 23:14:50,051 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-01-04 23:14:50,337 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-01-04 23:14:50,545 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-04 23:14:51,768 DEBUG com.example.demo.security.JWTAuthenticationVerificationFilter [main] Filter 'JWTAuthenticationVerificationFilter' configured for use
+2021-01-04 23:14:52,433 INFO com.example.demo.SareetaApplication [main] Started SareetaApplication in 6.378 seconds (JVM running for 6.934)
+2021-01-04 23:15:12,567 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-04 23:15:12,671 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-2] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test3
+2021-01-04 23:15:12,794 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-2] CREATE_USER_REQUEST_SUCCESS: User created with name: test3
+2021-01-04 23:15:19,595 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-3] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test4
+2021-01-04 23:15:19,673 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-3] CREATE_USER_REQUEST_SUCCESS: User created with name: test4
+2021-01-04 23:15:23,095 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-4] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test10
+2021-01-04 23:15:23,097 ERROR com.example.demo.controllers.UserController [http-nio-8080-exec-4] ERROR: passcode too short, must be at least 5 characters
+2021-01-04 23:15:27,502 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-6] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test11
+2021-01-04 23:15:27,504 ERROR com.example.demo.controllers.UserController [http-nio-8080-exec-6] ERROR: confirm password field doesn't match original password
+2021-01-04 23:15:33,149 DEBUG com.example.demo.security.JWTAuthenticationFilter [http-nio-8080-exec-8] Request is to process authentication
+2021-01-04 23:15:33,248 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8080-exec-8] HHH000397: Using ASTQueryTranslatorFactory
+2021-01-04 23:15:33,397 INFO com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-8] LOAD_USER_SUCCESS: user loadable
+2021-01-04 23:15:37,629 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-9] ERROR: Token not found!
+2021-01-04 23:15:37,647 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-9] SUCCESS: token found
+2021-01-04 23:15:37,648 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-9] ERROR: Token not found!
+2021-01-04 23:15:37,649 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-9] SUCCESS: token found
+2021-01-04 23:15:37,651 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-9] CART_UPDATE_REQUEST_INITIATED: Attempting to add item to cart
+2021-01-04 23:15:37,673 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-9] CART_UPDATE_SUCCESS: Cart updated with added item(s)
+2021-01-04 23:15:42,011 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-10] ERROR: Token not found!
+2021-01-04 23:15:42,012 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-10] SUCCESS: token found
+2021-01-04 23:15:42,013 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-10] ERROR: Token not found!
+2021-01-04 23:15:42,015 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-10] SUCCESS: token found
+2021-01-04 23:15:42,016 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-10] CART_UPDATE_REQUEST_INITIATED: Attempting to add item to cart
+2021-01-04 23:15:42,022 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-10] CART_UPDATE_SUCCESS: Cart updated with added item(s)
+2021-01-04 23:15:52,966 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-1] ERROR: Token not found!
+2021-01-04 23:15:52,968 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-1] SUCCESS: token found
+2021-01-04 23:15:52,968 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-1] ERROR: Token not found!
+2021-01-04 23:15:52,970 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-1] SUCCESS: token found
+2021-01-04 23:15:52,973 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-1] SUBMIT_ORDER_REQUEST_INITIATED: Attempting to submit order for user: test3
+2021-01-04 23:15:52,980 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-1] SUBMIT_ORDER_REQUEST_SUCCESS: Order created with username: test3
+2021-01-04 23:15:56,700 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] ERROR: Token not found!
+2021-01-04 23:15:56,701 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] SUCCESS: token found
+2021-01-04 23:15:56,702 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] ERROR: Token not found!
+2021-01-04 23:15:56,703 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] SUCCESS: token found
+2021-01-04 23:16:03,322 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-3] ERROR: Token not found!
+2021-01-04 23:16:03,324 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-3] SUCCESS: token found
+2021-01-04 23:16:03,325 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-3] ERROR: Token not found!
+2021-01-04 23:16:03,327 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-3] SUCCESS: token found
+2021-01-04 23:16:03,328 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-3] SUBMIT_ORDER_REQUEST_INITIATED: Attempting to submit order for user: test4
+2021-01-04 23:16:03,336 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-3] SUBMIT_ORDER_REQUEST_SUCCESS: Order created with username: test4
+2021-01-04 23:16:07,354 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-4] ERROR: Token not found!
+2021-01-04 23:16:07,355 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-4] SUCCESS: token found
+2021-01-04 23:16:07,357 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-4] ERROR: Token not found!
+2021-01-04 23:16:07,359 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-4] SUCCESS: token found
+2021-01-04 23:16:07,361 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-4] GET_ORDER_REQUEST_INITIATED: Attempting to find orders for user: test3
+2021-01-04 23:16:07,363 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-4] GET_ORDER_HISTORY_REQUEST_SUCCESS: Order history fetched with username: test3
+2021-01-04 23:16:13,043 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
+2021-01-04 23:16:13,047 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.
+2021-01-04 23:25:16,649 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on srich-a01.vmware.com with PID 96527 (/Users/srich/Desktop/javawebdevnanodegree/project4/target/classes started by srich in /Users/srich/Desktop/javawebdevnanodegree/project4)
+2021-01-04 23:25:16,652 DEBUG com.example.demo.SareetaApplication [main] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-01-04 23:25:16,653 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-01-04 23:25:18,573 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2021-01-04 23:25:18,574 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-01-04 23:25:18,740 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2021-01-04 23:25:19,001 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-01-04 23:25:19,164 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-01-04 23:25:19,223 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-01-04 23:25:19,289 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-01-04 23:25:19,291 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-01-04 23:25:19,452 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-01-04 23:25:19,597 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-04 23:25:20,777 DEBUG com.example.demo.security.JWTAuthenticationVerificationFilter [main] Filter 'JWTAuthenticationVerificationFilter' configured for use
+2021-01-04 23:25:21,477 INFO com.example.demo.SareetaApplication [main] Started SareetaApplication in 5.378 seconds (JVM running for 5.867)
+2021-01-04 23:25:27,994 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-04 23:25:28,126 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-2] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test5
+2021-01-04 23:25:28,346 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-2] CREATE_USER_REQUEST_SUCCESS: User created with name: test5
+2021-01-04 23:27:41,979 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-5] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test6
+2021-01-04 23:27:42,057 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-5] CREATE_USER_REQUEST_SUCCESS: User created with name: test6
+2021-01-04 23:27:45,472 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-6] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test7
+2021-01-04 23:27:45,552 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-6] CREATE_USER_REQUEST_SUCCESS: User created with name: test7
+2021-01-04 23:28:10,525 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-7] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test7
+2021-01-04 23:28:10,606 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-7] SQL Error: 23505, SQLState: 23505
+2021-01-04 23:28:10,607 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-7] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 3"; SQL statement:
+insert into user (id, cart_id, password, salt, username) values (null, ?, ?, ?, ?) [23505-199]
+2021-01-04 23:28:10,618 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8080-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 3"; SQL statement:
+insert into user (id, cart_id, password, salt, username) values (null, ?, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 3"; SQL statement:
+insert into user (id, cart_id, password, salt, username) values (null, ?, ?, ?, ?) [23505-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:103)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:220)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:196)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:546)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:180)
+	at org.h2.command.dml.Insert.update(Insert.java:132)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3077)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3667)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:332)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:196)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:127)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:800)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:785)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350)
+	at com.sun.proxy.$Proxy92.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:308)
+	at com.sun.proxy.$Proxy92.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:496)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy94.save(Unknown Source)
+	at com.example.demo.controllers.UserController.createUser(UserController.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.example.demo.security.JWTAuthenticationVerificationFilter.doFilterInternal(JWTAuthenticationVerificationFilter.java:34)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.example.demo.security.JWTAuthenticationVerificationFilter.doFilterInternal(JWTAuthenticationVerificationFilter.java:34)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-01-04 23:28:14,542 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-9] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test8
+2021-01-04 23:28:14,633 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-9] CREATE_USER_REQUEST_SUCCESS: User created with name: test8
+2021-01-04 23:28:51,208 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-10] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test10
+2021-01-04 23:28:51,287 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-10] CREATE_USER_REQUEST_SUCCESS: User created with name: test10
+2021-01-04 23:37:33,088 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] ERROR: Token not found!
+2021-01-04 23:37:33,161 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] SUCCESS: token found
+2021-01-04 23:37:33,162 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] ERROR: Token not found!
+2021-01-04 23:37:33,163 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] SUCCESS: token found
+2021-01-04 23:37:33,169 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-2] CART_UPDATE_REQUEST_INITIATED: Attempting to add item to cart
+2021-01-04 23:37:33,188 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8080-exec-2] HHH000397: Using ASTQueryTranslatorFactory
+2021-01-04 23:37:33,292 ERROR com.example.demo.controllers.CartController [http-nio-8080-exec-2] ERROR: User not found for cart
+2021-01-04 23:37:39,204 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-4] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test10
+2021-01-04 23:37:39,289 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-4] SQL Error: 23505, SQLState: 23505
+2021-01-04 23:37:39,289 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8080-exec-4] Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 6"; SQL statement:
+insert into user (id, cart_id, password, salt, username) values (null, ?, ?, ?, ?) [23505-199]
+2021-01-04 23:37:39,292 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 6"; SQL statement:
+insert into user (id, cart_id, password, salt, username) values (null, ?, ?, ?, ?) [23505-199]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PUBLIC.UK_SB8BBOUER5WAK8VYIIY4PF2BX_INDEX_2 ON PUBLIC.USER(USERNAME) VALUES 6"; SQL statement:
+insert into user (id, cart_id, password, salt, username) values (null, ?, ?, ?, ?) [23505-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:103)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:220)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:196)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:546)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:180)
+	at org.h2.command.dml.Insert.update(Insert.java:132)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:200)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:154)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3077)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3667)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:332)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:196)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:127)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:800)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:785)
+	at jdk.internal.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350)
+	at com.sun.proxy.$Proxy92.persist(Unknown Source)
+	at jdk.internal.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:308)
+	at com.sun.proxy.$Proxy92.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:496)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy94.save(Unknown Source)
+	at com.example.demo.controllers.UserController.createUser(UserController.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.example.demo.security.JWTAuthenticationVerificationFilter.doFilterInternal(JWTAuthenticationVerificationFilter.java:34)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at com.example.demo.security.JWTAuthenticationVerificationFilter.doFilterInternal(JWTAuthenticationVerificationFilter.java:34)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2021-01-04 23:37:41,780 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-5] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test4
+2021-01-04 23:37:41,868 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-5] CREATE_USER_REQUEST_SUCCESS: User created with name: test4
+2021-01-04 23:37:47,607 DEBUG com.example.demo.security.JWTAuthenticationFilter [http-nio-8080-exec-7] Request is to process authentication
+2021-01-04 23:37:47,705 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:47,787 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:47,862 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:47,941 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,016 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,089 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,164 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,240 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,314 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,389 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,464 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,540 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,621 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,701 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,796 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,871 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:48,945 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,019 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,095 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,169 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,244 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,318 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,391 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,466 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,543 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,620 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,694 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,776 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,851 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,925 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:49,999 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,074 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,149 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,225 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,299 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,373 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,447 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,523 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,597 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,675 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,758 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,831 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,907 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:50,982 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,056 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,132 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,209 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,283 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,357 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,435 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,509 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,591 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,675 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,763 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,847 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:51,924 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,003 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,111 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,212 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,301 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,397 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,510 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,621 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,751 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,862 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:52,968 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,084 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,191 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,275 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,355 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,428 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,503 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,592 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,675 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,750 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,824 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,898 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:53,971 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,044 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,117 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,195 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,269 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,359 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,466 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,566 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,647 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,731 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,814 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,889 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:54,963 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,037 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,116 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,191 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,265 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,341 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,415 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,489 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,566 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,680 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,789 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,874 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:55,954 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,034 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,126 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,207 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,287 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,377 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,453 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,528 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,605 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,679 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,758 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,835 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,916 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:56,991 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,067 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,143 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,217 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,292 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,368 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,443 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,520 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,599 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,679 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,763 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,841 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,916 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:57,996 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,070 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,142 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,215 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,289 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,363 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,441 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,517 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,594 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,668 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,743 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,816 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,890 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:58,963 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,039 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,113 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,185 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,259 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,333 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,403 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,477 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,552 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,625 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,699 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,774 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,847 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,921 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:37:59,995 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,068 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,143 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,217 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,291 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,364 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,439 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,511 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,585 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,660 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,735 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,811 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,891 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-8] ERROR: Token not found!
+2021-01-04 23:38:00,893 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-8] SUCCESS: token found
+2021-01-04 23:38:00,894 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-8] ERROR: Token not found!
+2021-01-04 23:38:00,895 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:00,895 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-8] SUCCESS: token found
+2021-01-04 23:38:00,897 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-8] CART_UPDATE_REQUEST_INITIATED: Attempting to add item to cart
+2021-01-04 23:38:00,899 ERROR com.example.demo.controllers.CartController [http-nio-8080-exec-8] ERROR: User not found for cart
+2021-01-04 23:38:00,984 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,057 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,132 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,204 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,278 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,352 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,424 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,499 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,573 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,645 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,720 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,793 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,865 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:01,937 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,014 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,087 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,159 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,232 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,305 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,378 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,454 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,527 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,613 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,692 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,767 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,840 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,917 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:02,989 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,064 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,140 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,223 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,300 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,372 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,444 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,519 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,601 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,676 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,758 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,834 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,909 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:03,983 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,057 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,129 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,203 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,277 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,350 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,423 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,498 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,572 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,645 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,723 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,797 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,871 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:04,947 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,021 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,093 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,171 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,246 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,320 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,403 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,479 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,563 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,653 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,764 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,847 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,924 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:05,999 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,072 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,150 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,226 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,298 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,375 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,448 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,521 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,598 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,672 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,751 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,827 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,901 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:06,975 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,051 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,125 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,199 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,273 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,346 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,418 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,491 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,568 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,640 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,718 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,795 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,869 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:07,946 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,020 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,098 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,171 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,248 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,320 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,394 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,469 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,543 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,615 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,689 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,765 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,839 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,915 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:08,989 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,062 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,136 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,210 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,283 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,356 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,431 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,504 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,580 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,653 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,728 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,802 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,875 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:09,947 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,021 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,096 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,170 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,243 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,319 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,393 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,467 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,542 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,615 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,689 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,764 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,837 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,910 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:10,989 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,063 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,138 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,213 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,286 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,360 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,434 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,507 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,581 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,654 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,730 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,802 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,879 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:11,951 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,024 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,098 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,170 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,243 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,319 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,392 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,465 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,537 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,614 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,692 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,767 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,841 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,918 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:12,992 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,066 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,141 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,214 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,289 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,363 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,438 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,514 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,598 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,676 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,757 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,836 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:13,925 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,006 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,095 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,186 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,265 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,340 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,413 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,485 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,559 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,635 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,710 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,790 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,863 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:14,935 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,009 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,084 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,158 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,231 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,306 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,379 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,452 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,526 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,601 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,674 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,749 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,822 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,897 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:15,970 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,042 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,117 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,191 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,262 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,336 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,409 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,480 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,554 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,628 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,701 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,775 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,850 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,921 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:16,996 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,079 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,152 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,226 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,301 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,374 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,447 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,521 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,592 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,666 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,741 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,813 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,888 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:17,962 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,034 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,109 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,183 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,255 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,328 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,401 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,474 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,547 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,622 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,697 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,773 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,846 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,920 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:18,994 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,071 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,145 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,219 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,292 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,365 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,440 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,513 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,587 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,662 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,751 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,830 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,911 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,912 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-10] CREATE_USER_REQUEST_INITIATED: Attempting to create user with name: test3
+2021-01-04 23:38:19,988 ERROR com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] ERROR: User does not exist with usernametest3
+2021-01-04 23:38:19,989 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-10] CREATE_USER_REQUEST_SUCCESS: User created with name: test3
+2021-01-04 23:38:20,088 INFO com.example.demo.security.UserDetailsServiceImpl [http-nio-8080-exec-7] LOAD_USER_SUCCESS: user loadable
+2021-01-04 23:38:24,035 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-1] ERROR: Token not found!
+2021-01-04 23:38:24,036 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-1] SUCCESS: token found
+2021-01-04 23:38:24,037 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-1] ERROR: Token not found!
+2021-01-04 23:38:24,038 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-1] SUCCESS: token found
+2021-01-04 23:38:24,040 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-1] CART_UPDATE_REQUEST_INITIATED: Attempting to add item to cart
+2021-01-04 23:38:24,073 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-1] CART_UPDATE_SUCCESS: Cart updated with added item(s)
+2021-01-04 23:38:29,110 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-3] ERROR: Token not found!
+2021-01-04 23:38:29,112 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-3] SUCCESS: token found
+2021-01-04 23:38:29,112 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-3] ERROR: Token not found!
+2021-01-04 23:38:29,113 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-3] SUCCESS: token found
+2021-01-04 23:38:29,118 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-3] SUBMIT_ORDER_REQUEST_INITIATED: Attempting to submit order for user: test3
+2021-01-04 23:38:29,130 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-3] SUBMIT_ORDER_REQUEST_SUCCESS: Order created with username: test3
+2021-01-04 23:39:00,906 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] ERROR: Token not found!
+2021-01-04 23:39:00,907 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] SUCCESS: token found
+2021-01-04 23:39:00,907 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] ERROR: Token not found!
+2021-01-04 23:39:00,908 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-2] SUCCESS: token found
+2021-01-04 23:39:00,909 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-2] CART_UPDATE_REQUEST_INITIATED: Attempting to add item to cart
+2021-01-04 23:39:00,915 INFO com.example.demo.controllers.CartController [http-nio-8080-exec-2] CART_UPDATE_SUCCESS: Cart updated with added item(s)
+2021-01-04 23:39:12,563 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-4] ERROR: Token not found!
+2021-01-04 23:39:12,564 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-4] SUCCESS: token found
+2021-01-04 23:39:12,565 ERROR com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-4] ERROR: Token not found!
+2021-01-04 23:39:12,567 INFO com.example.demo.security.JWTAuthenticationVerificationFilter [http-nio-8080-exec-4] SUCCESS: token found
+2021-01-04 23:39:12,568 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-4] SUBMIT_ORDER_REQUEST_INITIATED: Attempting to submit order for user: test10
+2021-01-04 23:39:12,574 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-4] SUBMIT_ORDER_REQUEST_SUCCESS: Order created with username: test10
+2021-01-04 23:41:38,898 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
+2021-01-04 23:41:38,902 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.
+2021-01-04 23:41:41,350 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on srich-a01.vmware.com with PID 1143 (/Users/srich/Desktop/javawebdevnanodegree/project4/target/classes started by srich in /Users/srich/Desktop/javawebdevnanodegree/project4)
+2021-01-04 23:41:41,353 DEBUG com.example.demo.SareetaApplication [main] Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2021-01-04 23:41:41,354 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-01-04 23:41:43,031 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2021-01-04 23:41:43,031 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-01-04 23:41:43,162 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2021-01-04 23:41:43,341 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-01-04 23:41:43,486 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-01-04 23:41:43,536 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-01-04 23:41:43,621 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2021-01-04 23:41:43,623 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2021-01-04 23:41:43,771 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-01-04 23:41:43,899 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-04 23:41:44,932 DEBUG com.example.demo.security.JWTAuthenticationVerificationFilter [main] Filter 'JWTAuthenticationVerificationFilter' configured for use
+2021-01-04 23:41:45,631 INFO com.example.demo.SareetaApplication [main] Started SareetaApplication in 4.673 seconds (JVM running for 5.158)
+2021-01-04 23:41:47,590 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
+2021-01-04 23:41:47,595 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.

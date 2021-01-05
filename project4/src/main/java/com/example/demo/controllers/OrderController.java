@@ -33,25 +33,27 @@ public class OrderController {
 	
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
-		logger.info("Attempting to submit order for user: " + username);
+		logger.info("SUBMIT_ORDER_REQUEST_INITIATED: Attempting to submit order for user: " + username);
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			logger.error("User not found during order submission");
+			logger.error("ERROR: User not found during order submission");
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
+		logger.info("SUBMIT_ORDER_REQUEST_SUCCESS: Order created with username: " + username);
 		return ResponseEntity.ok(order);
 	}
 	
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
-		logger.info("Attempting to find orders for user: " + username);
+		logger.info("GET_ORDER_REQUEST_INITIATED: Attempting to find orders for user: " + username);
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			logger.error("User not found during order history pull");
+			logger.error("ERROR: User not found during order history pull");
 			return ResponseEntity.notFound().build();
 		}
+		logger.info("GET_ORDER_HISTORY_REQUEST_SUCCESS: Order history fetched with username: " + username);
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }

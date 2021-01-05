@@ -37,41 +37,43 @@ public class CartController {
 	
 	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
-		logger.info("Attempting to add item to cart");
+		logger.info("CART_UPDATE_REQUEST_INITIATED: Attempting to add item to cart");
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
-			logger.error("User not found for cart");
+			logger.error("ERROR: User not found for cart");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			logger.error("Item not found in cart");
+			logger.error("ERROR: Item not found in cart");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.addItem(item.get()));
 		cartRepository.save(cart);
+		logger.info("CART_UPDATE_SUCCESS: Cart updated with added item(s)");
 		return ResponseEntity.ok(cart);
 	}
 	
 	@PostMapping("/removeFromCart")
 	public ResponseEntity<Cart> removeFromcart(@RequestBody ModifyCartRequest request) {
-		logger.info("Attempting to remove item from cart");
+		logger.info("CART_REMOVE_REQUEST_INITIATED: Attempting to remove item from cart");
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
-			logger.error("User not found for remove cart");
+			logger.error("ERROR: User not found for remove cart");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());
 		if(!item.isPresent()) {
-			logger.error("Item not found in remove cart");
+			logger.error("ERROR: Item not found in remove cart");
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.removeItem(item.get()));
 		cartRepository.save(cart);
+		logger.info("CART_REMOVE_REQUEST_SUCCESS: Item(s) removed form cart");
 		return ResponseEntity.ok(cart);
 	}
 		

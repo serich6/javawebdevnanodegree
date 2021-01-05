@@ -44,12 +44,15 @@ public class JWTAuthenticationVerificationFilter extends BasicAuthenticationFilt
     private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest req) {
         String token = req.getHeader(SecurityConstants.HEADER_STRING);
         if (token != null) {
+            logger.error("ERROR: Token not found!");
             String user = JWT.require(HMAC512(SecurityConstants.SECRET.getBytes())).build()
                     .verify(token.replace(SecurityConstants.TOKEN_PREFIX, ""))
                     .getSubject();
             if (user != null) {
+                logger.info("SUCCESS: token found");
                 return new UsernamePasswordAuthenticationToken(user, null, new ArrayList<>());
             }
+            logger.error("ERROR:User is null!");
             return null;
         }
         return null;
